@@ -1,0 +1,62 @@
+﻿
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>چاپ گزارش</title>
+
+    <!-- Report Viewer style -->
+
+    <link href="/libs/stimulsoft/css/stimulsoft.designer.office2013.whitepurple.css" rel="stylesheet" />
+    <link href="/libs/stimulsoft/css/stimulsoft.viewer.office2013.whitepurple.css" rel="stylesheet" />
+    <link href="/libs/stimulsoft/css/stimulsoft.custom.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!--<button type="button" onclick="viewer.onDesignReport({ report: viewer.report });">دیزاین</button>-->
+    <div id="designerContent"></div>
+    <div id="viewerContent"></div>
+    <!--<script src="report.js"></script>-->
+    <!-- jQuery -->
+    <!--<script src="/libs/jquery/dist/jquery.js"></script>-->
+    <!-- Stimusloft Reports.JS -->
+    <!--<script src="/libs/stimulsoft/scripts/stimulsoft.reports.js"></script>
+    <script src="/libs/stimulsoft/scripts/stimulsoft.viewer.js"></script>
+    <script src="/libs/stimulsoft/scripts/stimulsoft.designer.js"></script>-->
+    <!-- Application scripts -->
+    <script>
+
+        var URLS = [
+            "/libs/jquery/dist/jquery.js",
+            "/libs/stimulsoft/scripts/stimulsoft.reports.js",
+            "/libs/stimulsoft/scripts/stimulsoft.viewer.js",
+            "/libs/stimulsoft/scripts/stimulsoft.designer.js",
+            "report.js"
+        ]
+
+        function loadScript(index) {
+
+            if (index >= URLS.length)
+                return false;
+
+            var el = document.createElement('script');
+            el.onload = function () {
+                console.log(URLS[index]);
+                loadScript(index + 1);
+
+            }
+            el.src = URLS[index];
+            document.body.appendChild(el);
+
+
+        }
+
+
+    </script>
+
+
+    <script>loadScript(0)</script>
+</body>
+
+</html>

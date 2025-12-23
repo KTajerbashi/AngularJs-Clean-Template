@@ -1,0 +1,16 @@
+<div class="page-container">
+  <h1>{{vm.pageTitle}}</h1>
+  <p>{{vm.welcomeMessage}}</p>
+  
+  <div class="features">
+    <h3>Features:</h3>
+    <ul>
+      <li ng-repeat="feature in vm.features">{{feature}}</li>
+    </ul>
+  </div>
+  
+  <button ng-click="vm.getServerTime()">Get Server Time</button>
+  <div ng-if="vm.serverTime">
+    <p>Server time: {{vm.serverTime}}</p>
+  </div>
+</div>

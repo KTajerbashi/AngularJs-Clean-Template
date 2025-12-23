@@ -1,0 +1,32 @@
+{
+  "name": "angularjs",
+  "version": "1.0.0",
+  "description": "AngularJS Front Application",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon",
+    "dev": "node --watch ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tajerbashi/AngularJS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Tajerbashi/AngularJS/issues"
+  },
+  "homepage": "https://github.com/Tajerbashi/AngularJS#readme",
+  "dependencies": {
+    "angular-ui-bootstrap": "^2.5.6",
+    "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1",
+    "express": "^5.1.0",
+    "oclazyload": "^1.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

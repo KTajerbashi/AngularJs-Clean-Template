@@ -1,0 +1,11 @@
+<div class="page-container">
+  <h1>{{vm.pageTitle}}</h1>
+  <p>{{vm.description}}</p>
+  
+  <div class="team">
+    <h3>Our Team:</h3>
+    <div class="team-member" ng-repeat="member in vm.team">
+      <strong>{{member.name}}</strong> - {{member.role}}
+    </div>
+  </div>
+</div>
