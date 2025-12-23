@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AngularJs.Core.Domain\AngularJs.Core.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
