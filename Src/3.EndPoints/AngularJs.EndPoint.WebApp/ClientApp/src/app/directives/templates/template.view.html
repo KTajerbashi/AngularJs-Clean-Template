@@ -1,0 +1,30 @@
+<div class="single-uploader">
+    <label class="upload-btn">
+        انتخاب فایل
+        <input type="file" hidden />
+    </label>
+
+    <div class="file-preview-box" ng-if="file">
+        <div class="file-preview-content">
+            <img ng-if="file.file && file.file.type.startsWith('image/')" ng-src="{{file.url}}" alt="پیش‌نمایش" />
+            <span ng-if="!file.file || !file.file.type.startsWith('image/')">{{file.preview}}</span>
+
+            <!-- لینک دانلود -->
+            <a ng-if="file.url" ng-href="{{file.url}}" download="{{file.name}}" class="download-btn">
+                ⬇️ دانلود
+            </a>
+        </div>
+
+
+        <div class="file-info">
+            <span class="file-name">نام فایل: {{file.name}}</span>
+            <span class="file-size">حجم: {{file.size / 1024 | number:1}} کیلوبایت</span>
+            <span class="file-progress" ng-if="file.progress">درصد آپلود: {{file.progress}}%</span>
+        </div>
+
+        <div class="file-actions">
+            <button ng-click="upload()" title="آپلود فایل">⬆️ آپلود</button>
+            <button ng-click="remove()" title="حذف فایل">🗑️ حذف</button>
+        </div>
+    </div>
+</div>
